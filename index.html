@@ -236,15 +236,19 @@
   </div>
 </section>
   </main>
-          <script>
-  const navToggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelector(".nav-links");
+         <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
+    if (navToggle && navLinks) {
+      navToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("show");
 
-    const expanded = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", !expanded);
+        const expanded = navToggle.getAttribute("aria-expanded") === "true";
+        navToggle.setAttribute("aria-expanded", String(!expanded));
+      });
+    }
   });
 </script>
 </body>
