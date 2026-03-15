@@ -6,17 +6,6 @@
   <title>Jayden Brown Audio | Sound Design Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-  <script>
-  const navToggle = document.querySelector(".nav-toggle");
-  const navLinks = document.querySelector(".nav-links");
-
-  navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-
-    const expanded = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", !expanded);
-  });
-</script>
 <body>
   <header class="top-banner">
     <img src="images/banner_image.JPG" alt="Marching arts banner image" />
@@ -272,5 +261,16 @@ src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/so
       </div>
     </section>
   </main>
+          <script>
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !expanded);
+  });
+</script>
 </body>
 </html>
