@@ -6,25 +6,43 @@
   <title>Jayden Brown Audio | Sound Design Portfolio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+  <script>
+  const navToggle = document.querySelector(".nav-toggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !expanded);
+  });
+</script>
 <body>
   <header class="top-banner">
     <img src="images/banner_image.JPG" alt="Marching arts banner image" />
     <div class="banner-overlay"></div>
   </header>
 
-  <nav class="site-nav">
-    <div class="container nav-inner">
-      <div class="brand">JB Audio Designs</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#clients">Bands</a>
-        <a href="#audio">Audio Clips</a>
-        <a href="#projects">Current Projects</a>
-        <a href="#contact">Contact</a>
-      </div>
+ <nav class="site-nav">
+  <div class="container nav-inner">
+    <div class="brand">JB Audio Designs</div>
+
+    <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Bands</a>
+      <a href="#audio">Audio Clips</a>
+      <a href="#projects">Current Projects</a>
+      <a href="#contact">Contact</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
   <main>
    <section class="hero">
