@@ -373,7 +373,12 @@ a {
 }
 
 .hero h1 {
-  font-size: 2.4rem;
+  font-size: 1.7rem;
+  line-height: 1.15;
+}
+
+.hero-text2 {
+  display: none;
 }
 
 .hero-buttons {
@@ -402,7 +407,7 @@ a {
 }
 
 .top-banner {
-  height: 200px;
+  height: 90px;
 }
 
 .phone-box {
